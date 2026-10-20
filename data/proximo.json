@@ -1,60 +1,26 @@
 {
-  "updatedAt": "2026-10-20T15:00:00-06:00",
-  "example": true,
+  "updatedAt": "2026-10-20T16:15:38-06:00",
   "items": [
     {
-      "name": "Feria de ejemplo (no es real)",
-      "start": "2026-09-01",
-      "end": "2026-11-20",
+      "name": "Triangular SII 31 oct",
+      "start": "2026-10-31",
       "type": "evento",
       "area": "SII",
-      "url": "https://www.notion.so/ejemplo-feria-00000000000000000000000000000001"
+      "url": "https://app.notion.com/p/Triangular-SII-31-oct-3ff397baa7a981da90c3d9986b5db7ba"
     },
     {
-      "name": "Reunión ficticia de la mañana",
-      "start": "2026-10-20T09:30:00-06:00",
-      "type": "reunion",
-      "url": "https://www.notion.so/ejemplo-reunion-hoy-00000000000000000000000000000002"
-    },
-    {
-      "name": "Planificación de mentira",
-      "start": "2026-10-21",
-      "type": "reunion",
-      "url": "https://www.notion.so/ejemplo-plan-00000000000000000000000000000003"
-    },
-    {
-      "name": "Taller imaginario",
-      "start": "2026-10-24T16:00:00-06:00",
-      "type": "evento",
-      "area": "Taber",
-      "url": "https://www.notion.so/ejemplo-taller-00000000000000000000000000000004"
-    },
-    {
-      "name": "Jornada demo de noviembre",
-      "start": "2026-11-05",
+      "name": "Torneo de ajedrez Bless",
+      "start": "2026-11-04",
       "type": "evento",
       "area": "Bless",
-      "url": "https://www.notion.so/ejemplo-jornada-00000000000000000000000000000005"
+      "url": "https://app.notion.com/p/Torneo-de-ajedrez-Bless-3ff397baa7a981f68f01ec70c272d1b1"
     },
     {
-      "name": "Sesión inventada",
-      "start": "2026-11-18T11:00:00-06:00",
-      "type": "reunion",
-      "url": "https://www.notion.so/ejemplo-sesion-00000000000000000000000000000006"
-    },
-    {
-      "name": "Cierre de muestra",
-      "start": "2026-12-02",
+      "name": "Visita misionera 13 nov",
+      "start": "2026-11-13",
       "type": "evento",
-      "area": "Future Vision",
-      "url": "https://www.notion.so/ejemplo-cierre-00000000000000000000000000000007"
-    },
-    {
-      "name": "Visita de ejemplo FAHM",
-      "start": "2026-12-10",
-      "type": "evento",
-      "area": "FAHM",
-      "url": "https://www.notion.so/ejemplo-fahm-00000000000000000000000000000008"
+      "area": "Taber",
+      "url": "https://app.notion.com/p/Visita-misionera-13-nov-3ff397baa7a981f79785dbe778ea6136"
     }
   ]
 }
