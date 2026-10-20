@@ -1,0 +1,56 @@
+name: Actualizar Próximo
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: actualizar-proximo
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obtener el repositorio
+        uses: actions/checkout@v4
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Consultar Notion
+        id: sync
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DATABASE_ID: ${{ vars.NOTION_DATABASE_ID }}
+          NOTION_DATABASE_ID_SECRET: ${{ secrets.NOTION_DATABASE_ID }}
+          NOTION_PROYECTOS_ID: ${{ vars.NOTION_PROYECTOS_ID }}
+          NOTION_PROYECTOS_ID_SECRET: ${{ secrets.NOTION_PROYECTOS_ID }}
+        run: |
+          if [ -z "$NOTION_TOKEN" ]; then
+            echo "NOTION_TOKEN no está configurado."
+            echo "Se omite la actualización. Agrega el secret NOTION_TOKEN (token de la integración interna de Notion) para consultar Reuniones y Proyectos."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          node scripts/sync-notion.mjs
+          echo "skip=false" >> "$GITHUB_OUTPUT"
+
+      - name: Publicar el JSON solo si cambió
+        if: success() && steps.sync.outputs.skip != 'true'
+        run: |
+          git add data/proximo.json
+          if git diff --cached --quiet; then
+            echo "data/proximo.json no cambió. No se hace commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Actualizar próximas reuniones y eventos"
+          git push
