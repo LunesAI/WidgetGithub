@@ -1,0 +1,241 @@
+:root {
+  --bg: #eaf6ff;
+  --box: #bfe3fa;
+  --detail: #7fc4f2;
+  --accent: #3e8fd6;
+  --title: #1e5a9c;
+  --text: #1f2a37;
+  --white: #ffffff;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Poppins", "Segoe UI", system-ui, sans-serif;
+}
+
+.widget {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 14px 12px 12px;
+}
+
+h1 {
+  margin: 0 0 10px;
+  color: var(--title);
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.example {
+  display: inline-block;
+  margin: 0 0 8px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: var(--box);
+  color: var(--title);
+  font-size: 0.68rem;
+  font-weight: 600;
+}
+
+.featured,
+.card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.featured {
+  display: block;
+  margin: 0 0 12px;
+  padding: 13px 13px 12px;
+  border-radius: 14px;
+  background: var(--accent);
+  color: var(--white);
+}
+
+.featured:hover,
+.card:hover {
+  filter: brightness(0.97);
+}
+
+.featured:focus-visible,
+.card:focus-visible {
+  outline: 2px solid var(--title);
+  outline-offset: 2px;
+}
+
+.countdown {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.22);
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.title-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.kind {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 999px;
+  background: var(--detail);
+  font-size: 0.78rem;
+  line-height: 1;
+}
+
+.featured .kind {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.name {
+  flex: 1 1 8rem;
+  min-width: 0;
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.card .name {
+  font-size: 0.84rem;
+  font-weight: 500;
+}
+
+.area {
+  flex: none;
+  max-width: 100%;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--detail);
+  color: var(--title);
+  font-size: 0.64rem;
+  font-weight: 600;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.area-on-accent {
+  background: rgba(255, 255, 255, 0.22);
+  color: var(--white);
+}
+
+.when {
+  display: block;
+  margin-top: 4px;
+  color: var(--title);
+  font-size: 0.74rem;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.featured .when {
+  margin-top: 6px;
+  color: var(--white);
+  font-size: 0.8rem;
+}
+
+.month h2 {
+  margin: 12px 2px 6px;
+  color: var(--title);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin: 0 0 6px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: var(--box);
+}
+
+.card:hover {
+  background: var(--detail);
+}
+
+.dot,
+.dot-spacer {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  margin-top: 0.45rem;
+  border-radius: 50%;
+}
+
+.dot {
+  background: var(--accent);
+}
+
+.card .body {
+  flex: 1;
+  min-width: 0;
+}
+
+.more {
+  margin: 6px 2px 0;
+  color: var(--title);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.empty,
+.loading {
+  margin: 0;
+  padding: 14px 12px;
+  border-radius: 12px;
+  background: var(--box);
+  color: var(--text);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.updated {
+  margin: 12px 2px 0;
+  color: var(--title);
+  font-size: 0.65rem;
+  line-height: 1.3;
+  opacity: 0.8;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
