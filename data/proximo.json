@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-20T16:15:38-06:00",
+  "updatedAt": "2026-10-22T16:06:39-06:00",
   "items": [
     {
       "name": "Triangular SII 31 oct",
@@ -14,6 +14,13 @@
       "type": "evento",
       "area": "Bless",
       "url": "https://app.notion.com/p/Torneo-de-ajedrez-Bless-3ff397baa7a981f68f01ec70c272d1b1"
+    },
+    {
+      "name": "Torneo de ajedrez Future Vision",
+      "start": "2026-11-06",
+      "type": "evento",
+      "area": "Future Vision",
+      "url": "https://app.notion.com/p/Torneo-de-ajedrez-Future-Vision-3ff397baa7a98154bc2bf6e13d8f2300"
     },
     {
       "name": "Visita misionera 13 nov",
